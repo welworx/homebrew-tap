@@ -3,8 +3,10 @@
 set -euo pipefail
 
 changed=0
+summary=""
 
 for formula in Formula/*.rb; do
+  name=$(basename "$formula" .rb)
   repo=$(grep -oE 'github\.com/[^/]+/[^/"]+' "$formula" | head -1 | sed 's#github.com/##')
   current_url=$(grep -oE 'url "[^"]+"' "$formula" | head -1 | sed 's/url "//;s/"$//')
   current_tag=$(echo "$current_url" | grep -oE 'tags/[^/]+\.tar\.gz$' | sed 's#tags/##;s#\.tar\.gz$##')
@@ -12,7 +14,7 @@ for formula in Formula/*.rb; do
   latest_tag=$(gh api "repos/$repo/releases/latest" --jq .tag_name)
 
   if [ "$latest_tag" != "$current_tag" ]; then
-    echo "Updating $(basename "$formula" .rb): $current_tag -> $latest_tag"
+    echo "Updating $name: $current_tag -> $latest_tag"
     new_url="https://github.com/$repo/archive/refs/tags/${latest_tag}.tar.gz"
     tmpfile=$(mktemp)
     curl -sL "$new_url" -o "$tmpfile"
@@ -22,9 +24,16 @@ for formula in Formula/*.rb; do
     sed -i.bak "s#sha256 \".*\"#sha256 \"$new_sha\"#" "$formula"
     rm -f "$formula.bak"
     changed=1
+    summary="${summary}${name}: ${current_tag} -> ${latest_tag}
+"
   fi
 done
 
 if [ -n "${GITHUB_OUTPUT:-}" ]; then
   echo "changed=$changed" >> "$GITHUB_OUTPUT"
+  {
+    echo "summary<<FORMULA_UPDATE_EOF"
+    printf '%s' "$summary"
+    echo "FORMULA_UPDATE_EOF"
+  } >> "$GITHUB_OUTPUT"
 fi
