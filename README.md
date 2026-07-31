@@ -18,4 +18,10 @@ brew install welworx/tap/flatex-fetch
 brew install welworx/tap/flatex-pdf-cli
 ```
 
+**[smartmeter-fetch](https://github.com/welworx/smartmeter-fetch)** — fetch smart meter readings from grid operator web portals
+
+```
+brew install welworx/tap/smartmeter-fetch
+```
+
 Formulas are checked daily and auto-bumped to each project's latest release.
