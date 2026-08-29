@@ -1,8 +1,8 @@
 class FlatexPdfCli < Formula
   desc "Extract structured JSON from German flatexDEGIRO broker PDFs"
   homepage "https://github.com/welworx/flatex-pdf-cli"
-  url "https://github.com/welworx/flatex-pdf-cli/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "aed4fb87ae21ccb19779d3ff743a18e0df490536b2753a897b35b5458cf68870"
+  url "https://github.com/welworx/flatex-pdf-cli/archive/refs/tags/v0.8.1.tar.gz"
+  sha256 "6cae2de5c350896a99fecaa361976eb78e9fdd2d5c89b9776932b69af4b4c406"
   license "MIT"
   head "https://github.com/welworx/flatex-pdf-cli.git", branch: "master"
 
