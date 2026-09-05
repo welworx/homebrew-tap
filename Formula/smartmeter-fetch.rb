@@ -1,8 +1,8 @@
 class SmartmeterFetch < Formula
   desc "Fetch smart meter readings from grid operator web portals"
   homepage "https://github.com/welworx/smartmeter-fetch"
-  url "https://github.com/welworx/smartmeter-fetch/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "aed52f8debfb0e9d134e5b21875dff8bc717d95385d1908d6790a995dbd86c47"
+  url "https://github.com/welworx/smartmeter-fetch/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "31a546afb9905da418d3ddb5192917c2e7d042dcc4854eb4bc10d3a071ff4a20"
   license "GPL-3.0-only"
   head "https://github.com/welworx/smartmeter-fetch.git", branch: "main"
 
