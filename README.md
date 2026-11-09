@@ -25,3 +25,11 @@ brew install welworx/tap/smartmeter-fetch
 ```
 
 Formulas are checked daily and auto-bumped to each project's latest release.
+
+**[dimvexa](https://github.com/welworx/dimvexa)** — unit conversion with exact factors and loud failures (prebuilt binary, no Rust needed)
+
+```
+brew install welworx/tap/dimvexa
+```
+
+The formula appears here automatically (nightly update) once a dimvexa release that ships binaries exists.
