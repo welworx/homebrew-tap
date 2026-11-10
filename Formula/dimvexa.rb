@@ -1,28 +1,28 @@
 class Dimvexa < Formula
   desc "Unit conversion with exact factors and loud failures"
   homepage "https://github.com/welworx/dimvexa"
-  version "0.1.2"
+  version "0.2.2"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/welworx/dimvexa/releases/download/v0.1.2/dimvexa-0.1.2-aarch64-apple-darwin.tar.gz"
-      sha256 "04b17130125dcd6692fd9cbf0be9828645ffe451e84f174e0a91404ae5ace652"
+      url "https://github.com/welworx/dimvexa/releases/download/v0.2.2/dimvexa-0.2.2-aarch64-apple-darwin.tar.gz"
+      sha256 "cf6ee43f545fb830349f400b14141432347141c3c433203718c4cae78891a71a"
     end
     on_intel do
-      url "https://github.com/welworx/dimvexa/releases/download/v0.1.2/dimvexa-0.1.2-x86_64-apple-darwin.tar.gz"
-      sha256 "8f5ff8f0ac6fb6f0ca63ef927cd8fdeeab1429337facc772bb87374d0fa51ad9"
+      url "https://github.com/welworx/dimvexa/releases/download/v0.2.2/dimvexa-0.2.2-x86_64-apple-darwin.tar.gz"
+      sha256 "d8783a09bd33d1015384a2597bf41c66b90daffc686af3d465ee3d933c9d28d4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/welworx/dimvexa/releases/download/v0.1.2/dimvexa-0.1.2-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "de3a0a2623da6f407c2273b65dea8bd8de6ff6083d50ff8290630cec1794a6ff"
+      url "https://github.com/welworx/dimvexa/releases/download/v0.2.2/dimvexa-0.2.2-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "dbcf3f755ecb71cfd4d7bb194b69f7fa1a7776a588d97e1cdcdc00a065e29d3f"
     end
     on_intel do
-      url "https://github.com/welworx/dimvexa/releases/download/v0.1.2/dimvexa-0.1.2-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "3cbcffbb96f3fceccea7f6262e02d2fe9651941c9b3a454beb5f337725222c7d"
+      url "https://github.com/welworx/dimvexa/releases/download/v0.2.2/dimvexa-0.2.2-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "e7bbd500e5a57a7c5ded12e08e14ecc903711d83fea8e55aa80c6d7b1c23d804"
     end
   end
 
